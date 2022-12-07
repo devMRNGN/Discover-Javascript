@@ -7,8 +7,12 @@ modal.onclick = function openModal(){
 
 
 modal.onkeydown = function esc(event){
-    if(event.key == "Escape"){
-        const element = document.querySelector('body > div');
+    const element = document.querySelector('body > div');
+    const isEsc = event.key === "Escape";
+    const haveInvisible = element.getAttribute('class').includes('invisible');
+    if(haveInvisible){
+
+    } else if(isEsc){
         element.classList.add('invisible');
     }
 }
