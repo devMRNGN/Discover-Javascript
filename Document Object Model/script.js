@@ -56,3 +56,66 @@ elementClassList.classList.add('active');
 // console.log(element.classList);
 elementClassList.classList.remove('active');
 elementClassList.classList.toggle('active');
+
+// pegando os elementos pai
+
+const body = document.querySelector('body');
+
+body.parentNode; // pegando o elemento pai do body
+
+// pegando os elementos filhos
+
+const el = document.querySelector('body');
+
+el.childNodes; /* pegando os filhos do body ou */ el.children // pegando os filhos só que retorna em formato HTMLCollection
+
+// somente o primeiro filho
+
+el.firstChild // retorna o primeiro filho, porém caso seja um espaço em branco, ele retorna o espaço e não um elemento
+
+el.firstElementChild // Esse sim retornara o primeiro filho que seja um ELEMENTO, ignorando os espaços
+
+// ultimo filho
+
+el.lastChild // retorna o ultimo filho contadno espaços
+
+el.lastElementChild // retorna o ultimo filho que seja um ELEMENTO
+
+// NAVEGAR PELOS ELEMENTOS IRMÃOS
+
+const whatever = document.querySelector('body script'); // Pegando o irmão do script que está dentro do body
+
+// nextSibling nextElementSibling (proximo irmão)
+
+whatever.nextSibling // conta os espaços
+whatever.nextElementSibling // Ignora os espaços
+
+// irmão anterior previousSibling previousElementSibling
+
+whatever.previousSibling // conta espaços
+whatever.previousElementSibling // ignora os espaços 
+
+// IMPORTANT ******* CRIAR E ADICIONAR ELEMENTOS **********
+
+//create element
+
+const div = document.createElement('div');
+div.innerText = "Olá Devs!";
+
+// append = adicionar depois / preppend = adicionar antes
+
+const bodyy = document.querySelector('body');
+
+body.append(div); // adicionando depois do script(ultimo filho do body) a div contendo "olá devs!"
+
+body.preppend(div); // adiciona antes, vai pegar o body e adicionar a div como primeiro filho 
+
+// Insert Before (adicionando itens em posições diferentes de primeira e ultima)
+const script = body.querySelector('script');
+
+body.insertBefore(div, script) // recebe dois argumentos 1 o elemento que eu quero por no caso (div) e segundo atras de qual elemento
+// before = antes o segundo argumento é antes de qual elemento a div irá ser adicionada, no caso está sendo adicionada antes do script
+
+// simulando um insertAfter colocando depois
+const headerr = document.querySelector('header');
+body.insertBefore(div, headerr.nextElementSibling)
