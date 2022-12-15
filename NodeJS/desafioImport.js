@@ -5,5 +5,4 @@
 
 const getFlag = require('./desafio');
 
-getFlag('--name');
-getFlag('--greeting');
+console.log(`Oi ${getFlag('--name')}. ${getFlag('--greeting')}`);

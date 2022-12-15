@@ -11,14 +11,14 @@
 
 // Primeira parte
 
-module.exports = function getFlag(string) {
-    for(let i = 0; i < process.argv.length; i++){
-        if(process.argv[i] == string){
-            console.log(process.argv[i+1]);
-        }
-    }
-};
+function getFlagValue(string){
+    const index = process.argv.indexOf(string) + 1;
+    return process.argv[index];
+}
 
+module.exports = getFlagValue;
+
+/*
 function getFlag(string) {
     for(let i = 0; i < process.argv.length; i++){
         if(process.argv[i] == string){
@@ -26,3 +26,4 @@ function getFlag(string) {
         }
     }
 }
+*/
