@@ -1,0 +1,15 @@
+{
+  "name": "qualquer-nome",
+  "version": "1.0.0",
+  "description": "aprendendo node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "learning",
+    "nodejs"
+  ],
+  "author": "João Marangoni",
+  "license": "MIT"
+}
