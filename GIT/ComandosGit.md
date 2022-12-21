@@ -29,4 +29,5 @@ pwd (ver que pasta esta atualmente)<br>
 git diff (ve as alterações que rolaram no arquivo)<br>
 git commit -am "mnsagem commit" (quando vc ja possui uma pasta .git, voce pode usar esse comando que soma o git add . com o commit"<br>
 git show (iniciais da hash) te mostra todas as modificações de um commit com o inicial commit<br>
-git show --color words (mostra as palavras que foram modificadas)
+git show --color words (mostra as palavras que foram modificadas) <br>
+git pull  (puxa oq voce alterou no github (nuvem) para a maquina local)
